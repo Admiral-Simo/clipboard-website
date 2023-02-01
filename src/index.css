@@ -1,5 +1,44 @@
 @tailwind base;
-
 @tailwind components;
-
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@layer base {
+  h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+  h5 {
+    @apply mb-2 text-2xl font-semibold text-darkGrayishBlue;
+  }
+  
+}
+
+.large-paragraph {
+  @apply max-w-3xl mx-auto mb-10 text-xl text-grayishBlue;
+}
+
+.section-container {
+  @apply max-w-6xl mx-auto text-center px-10;
+}
+
+.button-container {
+  @apply flex flex-col justify-center w-full space-y-6 text-lg md:text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+}
+
+body {
+  background-image: url("./images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url("./images/bg-header-mobile.png");
+  }
+}
